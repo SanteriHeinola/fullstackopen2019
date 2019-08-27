@@ -12,20 +12,20 @@ const Header = (props) => {
 
       
 const Content = (props) => {
-  console.log(props.parts);
+  console.log(props.parts[0].exercises);
   return (
     <div>
       <Part
-        part={props.parts.name}
-        exercises={props.parts.exercises}
+        part={props.parts[0].name}
+        exercises={props.parts[0].exercises}
       />
       <Part
-        part={props.parts.name}
-        exercises={props.parts.exercises}
+        part={props.parts[1].name}
+        exercises={props.parts[1].exercises}
       />
       <Part
-        part={props.parts.name}
-        exercises={props.parts.exercises}
+        part={props.parts[2].name}
+        exercises={props.parts[2].exercises}
       />
     </div>
   )
@@ -41,10 +41,10 @@ const Part = (props) => {
 }
 
 const Total = (props) => {
-  console.log(props.lenght);
   return (
     <p>
-      Number of exercises {props.parts.exercises}
+      Number of exercises {props.parts[0].exercises + 
+        props.parts[1].exercises + props.parts[2].exercises}
     </p>
   )
 }
